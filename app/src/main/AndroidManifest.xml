@@ -16,7 +16,7 @@
             android:name=".PayActivity"
             android:exported="false" />
         <activity
-            android:name=".CreateOrderActivity"
+            android:name=".OrderListActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
