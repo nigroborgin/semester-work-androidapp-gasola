@@ -64,7 +64,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:text="TextView"
+                android:text=""
                 app:layout_constraintStart_toEndOf="@+id/mcvAvatar"
                 app:layout_constraintTop_toTopOf="@+id/mcvAvatar"
                 tools:text="Johana Doe" />
@@ -88,7 +88,7 @@
                     android:id="@+id/tvBack"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="TextView"
+                    android:text="@string/back"
                     app:layout_constraintBottom_toBottomOf="@+id/ivBack"
                     app:layout_constraintStart_toEndOf="@+id/ivBack"
                     app:layout_constraintTop_toTopOf="@+id/ivBack"
@@ -120,7 +120,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text="TextView"
+                android:text=""
                 app:layout_constraintBottom_toBottomOf="@+id/ivCash"
                 app:layout_constraintStart_toEndOf="@+id/ivCash"
                 app:layout_constraintTop_toTopOf="@+id/ivCash"
@@ -162,7 +162,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="TextView"
+                android:text="@string/order_execution"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ivMap"
                 tools:text="Выполнение заказа" />
@@ -203,7 +203,7 @@
                         android:id="@+id/tietAddPoint"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
-                        android:hint="добавить точку" />
+                        android:hint="@string/add_point" />
                 </com.google.android.material.textfield.TextInputLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -223,7 +223,7 @@
                 android:id="@+id/tvDetails"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView"
+                android:text="@string/order_details"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="Детали заказа" />
@@ -250,13 +250,13 @@
                             android:id="@+id/tvDetailName"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="TextView" />
+                            android:text="" />
 
                         <TextView
                             android:id="@+id/tvDetailContent"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="TextView" />
+                            android:text="" />
                     </TableRow>
 
                 </TableLayout>
@@ -308,7 +308,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:text="TextView"
+                    android:text=""
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/ivPrice"
                     app:layout_constraintTop_toTopOf="parent"
@@ -320,7 +320,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="2dp"
-                    android:text="TextView"
+                    android:text="@string/price_currency"
                     app:layout_constraintBottom_toBottomOf="@+id/tvPrice"
                     app:layout_constraintStart_toEndOf="@+id/tvPrice"
                     app:layout_constraintTop_toTopOf="@+id/tvPrice"
@@ -332,7 +332,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:backgroundTint="@color/yellow"
-                android:text="Button"
+                android:text="@string/take_order"
                 android:textSize="11sp"
                 app:cornerRadius="@dimen/button_corner_radius"
                 app:layout_constraintEnd_toEndOf="@+id/clPrice"
@@ -361,7 +361,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Комментарий от водителя" />
+                    android:hint="@string/comment_from_driver" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <LinearLayout
@@ -379,7 +379,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
                     android:backgroundTint="@color/light_red"
-                    android:text="Button"
+                    android:text="@string/finished"
                     app:cornerRadius="@dimen/button_corner_radius"
                     tools:text="Закончил" />
 
@@ -389,7 +389,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
                     android:backgroundTint="@color/green"
-                    android:text="Button"
+                    android:text="@string/arrived"
                     app:cornerRadius="@dimen/button_corner_radius"
                     tools:text="Прибыл" />
 
@@ -398,7 +398,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/yellow"
-                    android:text="Button"
+                    android:text="@string/cancel"
                     app:cornerRadius="@dimen/button_corner_radius"
                     tools:text="Отменить" />
             </LinearLayout>

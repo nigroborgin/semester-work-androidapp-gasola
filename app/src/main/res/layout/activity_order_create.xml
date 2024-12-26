@@ -64,7 +64,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:text="TextView"
+                android:text=""
                 app:layout_constraintStart_toEndOf="@+id/mcvAvatar"
                 app:layout_constraintTop_toTopOf="@+id/mcvAvatar"
                 tools:text="Johana Doe" />
@@ -88,7 +88,7 @@
                     android:id="@+id/tvBack"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="TextView"
+                    android:text="@string/back"
                     app:layout_constraintBottom_toBottomOf="@+id/ivBack"
                     app:layout_constraintStart_toEndOf="@+id/ivBack"
                     app:layout_constraintTop_toTopOf="@+id/ivBack"
@@ -120,7 +120,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text="TextView"
+                android:text=""
                 app:layout_constraintBottom_toBottomOf="@+id/ivCash"
                 app:layout_constraintStart_toEndOf="@+id/ivCash"
                 app:layout_constraintTop_toTopOf="@+id/ivCash"
@@ -152,7 +152,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/clDetails"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/clDateTime"
@@ -166,7 +166,7 @@
                         android:id="@+id/tvDateTime"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="TextView"
+                        android:text="@string/date_and_time"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         tools:text="Дата и время" />
@@ -182,14 +182,14 @@
                             android:id="@+id/rbNearestTime"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="RadioButton"
+                            android:text="@string/nearest_time"
                             tools:text="Ближайшее время" />
 
                         <RadioButton
                             android:id="@+id/rbOnDate"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="RadioButton"
+                            android:text="@string/on_date"
                             tools:text="На дату" />
                     </RadioGroup>
 
@@ -235,10 +235,10 @@
                     app:layout_constraintTop_toBottomOf="@id/clDateTime">
 
                     <TextView
-                        android:id="@+id/tvAdresses"
+                        android:id="@+id/tvAddresses"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="TextView"
+                        android:text="@string/addresses"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         tools:text="Адреса" />
@@ -248,13 +248,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tvAdresses">
+                        app:layout_constraintTop_toBottomOf="@+id/tvAddresses">
 
                         <TextView
                             android:id="@+id/tvWhereFrom"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="TextView"
+                            android:text="@string/WhereFrom"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             tools:text="Откуда" />
@@ -313,7 +313,7 @@
                                 android:id="@+id/cbElevator"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="CheckBox"
+                                android:text="@string/elevator"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
                                 tools:text="лифт" />
@@ -322,7 +322,7 @@
                                 android:id="@+id/cbIntercom"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="CheckBox"
+                                android:text="@string/intercom"
                                 app:layout_constraintStart_toStartOf="@+id/cbElevator"
                                 app:layout_constraintTop_toBottomOf="@+id/cbElevator"
                                 tools:text="домофон" />
@@ -341,7 +341,7 @@
                             android:id="@+id/tvWhere"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="TextView"
+                            android:text="@string/Where"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             tools:text="Куда" />
@@ -399,7 +399,7 @@
                                 android:id="@+id/cbElevator2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="CheckBox"
+                                android:text="@string/elevator"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
                                 tools:text="лифт" />
@@ -408,7 +408,7 @@
                                 android:id="@+id/cbIntercom2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="CheckBox"
+                                android:text="@string/intercom"
                                 app:layout_constraintStart_toStartOf="@+id/cbElevator2"
                                 app:layout_constraintTop_toBottomOf="@+id/cbElevator2"
                                 tools:text="домофон" />
@@ -428,7 +428,7 @@
                         android:id="@+id/tvTruckBody"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="TextView"
+                        android:text="@string/size_of_truck_body"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         tools:text="Размер кузова" />
@@ -437,7 +437,7 @@
                         android:id="@+id/cbTruckBody1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="CheckBox"
+                        android:text="@string/track_body1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/tvTruckBody"
                         tools:text="3" />
@@ -446,7 +446,7 @@
                         android:id="@+id/cbTruckBody2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="CheckBox"
+                        android:text="@string/truck_body2"
                         app:layout_constraintBottom_toBottomOf="@+id/cbTruckBody1"
                         app:layout_constraintStart_toEndOf="@+id/cbTruckBody1"
                         app:layout_constraintTop_toTopOf="@+id/cbTruckBody1"
@@ -456,7 +456,7 @@
                         android:id="@+id/cbTruckBody3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="CheckBox"
+                        android:text="@string/truck_body3"
                         app:layout_constraintBottom_toBottomOf="@+id/cbTruckBody2"
                         app:layout_constraintStart_toEndOf="@+id/cbTruckBody2"
                         app:layout_constraintTop_toTopOf="@+id/cbTruckBody2"
@@ -466,7 +466,7 @@
                         android:id="@+id/cbTruckBody4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="CheckBox"
+                        android:text="@string/truck_body4"
                         app:layout_constraintBottom_toBottomOf="@+id/cbTruckBody3"
                         app:layout_constraintStart_toEndOf="@+id/cbTruckBody3"
                         app:layout_constraintTop_toTopOf="@+id/cbTruckBody3"
@@ -476,7 +476,7 @@
                         android:id="@+id/cbTruckBody5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="CheckBox"
+                        android:text="@string/truck_body5"
                         app:layout_constraintBottom_toBottomOf="@+id/cbTruckBody4"
                         app:layout_constraintStart_toEndOf="@+id/cbTruckBody4"
                         app:layout_constraintTop_toTopOf="@+id/cbTruckBody4"
@@ -494,7 +494,7 @@
                         android:id="@+id/tvMovers"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="TextView"
+                        android:text="@string/movers"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         tools:text="Грузчики" />
@@ -503,7 +503,7 @@
                         android:id="@+id/cbCountMovers1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="CheckBox"
+                        android:text="@string/count_movers_1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/tvMovers"
                         tools:text="1" />
@@ -513,7 +513,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="3dp"
-                        android:text="CheckBox"
+                        android:text="@string/count_movers_2"
                         app:layout_constraintBottom_toBottomOf="@+id/cbCountMovers1"
                         app:layout_constraintStart_toEndOf="@+id/cbCountMovers1"
                         app:layout_constraintTop_toTopOf="@+id/cbCountMovers1"
@@ -523,7 +523,7 @@
                         android:id="@+id/cbCountMovers3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="CheckBox"
+                        android:text="@string/count_movers_3"
                         app:layout_constraintBottom_toBottomOf="@+id/cbCountMovers2"
                         app:layout_constraintStart_toEndOf="@+id/cbCountMovers2"
                         app:layout_constraintTop_toTopOf="@+id/cbCountMovers2"
@@ -533,7 +533,7 @@
                         android:id="@+id/cbCountMovers4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="CheckBox"
+                        android:text="@string/count_movers_4"
                         app:layout_constraintBottom_toBottomOf="@+id/cbCountMovers3"
                         app:layout_constraintStart_toEndOf="@+id/cbCountMovers3"
                         app:layout_constraintTop_toTopOf="@+id/cbCountMovers3"
@@ -543,7 +543,7 @@
                         android:id="@+id/cbCountMovers0"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="CheckBox"
+                        android:text="@string/no"
                         app:layout_constraintBottom_toBottomOf="@+id/cbCountMovers4"
                         app:layout_constraintStart_toEndOf="@+id/cbCountMovers4"
                         app:layout_constraintTop_toTopOf="@+id/cbCountMovers4"
@@ -561,7 +561,7 @@
                         android:id="@+id/tvCustomer"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="TextView"
+                        android:text="@string/Customer"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         tools:text="Заказчик" />
@@ -666,7 +666,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:text="TextView"
+                    android:text=""
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/ivPrice"
                     app:layout_constraintTop_toTopOf="parent"
@@ -678,7 +678,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="2dp"
-                    android:text="TextView"
+                    android:text="@string/price_currency"
                     app:layout_constraintBottom_toBottomOf="@+id/tvPrice"
                     app:layout_constraintStart_toEndOf="@+id/tvPrice"
                     app:layout_constraintTop_toTopOf="@+id/tvPrice"
@@ -690,7 +690,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="45dp"
                 android:backgroundTint="@color/light_green"
-                android:text="Button"
+                android:text="@string/to_order"
                 android:textSize="11sp"
                 app:cornerRadius="@dimen/button_corner_radius"
                 app:layout_constraintEnd_toEndOf="@+id/clPrice"

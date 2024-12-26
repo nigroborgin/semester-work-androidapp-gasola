@@ -10,10 +10,12 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clReg"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="48dp"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="48dp"
+        android:layout_marginBottom="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -23,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
-            android:text="TextView"
+            android:text="@string/registration"
             android:textColor="@color/black"
             android:textFontWeight="600"
             android:textSize="@dimen/text_sise_title"
@@ -42,8 +44,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/clRegForm"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:visibility="visible">
+                android:layout_height="wrap_content">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/clInputName"
@@ -57,7 +58,7 @@
                         android:id="@+id/tvName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="TextView"
+                        android:text="@string/name"
                         android:textColor="@color/default_pink"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
@@ -69,11 +70,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/distance_form_to_title"
                         android:ems="10"
+                        android:hint="@string/enter_name"
                         android:inputType="text"
-                        android:text="Name"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tvName"
-                        tools:text="Укажите имя" />
+                        app:layout_constraintTop_toBottomOf="@+id/tvName" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -89,7 +89,7 @@
                         android:id="@+id/tvPhone"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="TextView"
+                        android:text="@string/phone_number"
                         android:textColor="@color/default_pink"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
@@ -99,13 +99,12 @@
                         android:id="@+id/etPhone"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/distance_form_to_title"
+                        android:layout_marginTop="20dp"
                         android:ems="10"
+                        android:hint="@string/specify_phone_number"
                         android:inputType="text"
-                        android:text="Name"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tvPhone"
-                        tools:text="Укажите телефон" />
+                        app:layout_constraintTop_toBottomOf="@+id/tvPhone" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -131,7 +130,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
-                        android:text="TextView"
+                        android:text="@string/add_photo"
                         app:layout_constraintStart_toEndOf="@+id/imageView"
                         app:layout_constraintTop_toTopOf="@+id/imageView"
                         tools:text="Добавьте фото" />
@@ -142,7 +141,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="18dp"
                         android:backgroundTint="@android:color/transparent"
-                        android:text="Button"
+                        android:text="@string/choose_photo"
                         android:textColor="@color/black"
                         app:cornerRadius="@dimen/button_corner_radius"
                         app:layout_constraintStart_toStartOf="@+id/textView2"
@@ -168,7 +167,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="16dp"
-                        android:text="TextView"
+                        android:text="@string/car"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         tools:text="Автомобиль" />
@@ -192,8 +191,8 @@
                             android:layout_marginEnd="8dp"
                             android:layout_weight="1"
                             android:ems="10"
-                            android:inputType="numberDecimal"
-                            tools:text="Длина, м" />
+                            android:hint="@string/length_meters"
+                            android:inputType="numberDecimal" />
 
                         <EditText
                             android:id="@+id/etWidth"
@@ -202,8 +201,8 @@
                             android:layout_marginEnd="8dp"
                             android:layout_weight="1"
                             android:ems="10"
-                            android:inputType="numberDecimal"
-                            tools:text="Ширина, м" />
+                            android:hint="@string/width_meters"
+                            android:inputType="numberDecimal" />
 
                         <EditText
                             android:id="@+id/etHeight"
@@ -211,8 +210,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:ems="10"
-                            android:inputType="numberDecimal"
-                            tools:text="Высота, м" />
+                            android:hint="@string/height_meters"
+                            android:inputType="numberDecimal" />
                     </LinearLayout>
 
                     <EditText
@@ -221,12 +220,11 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:ems="10"
+                        android:hint="@string/auto_mark"
                         android:inputType="text"
-                        android:text="Name"
                         app:layout_constraintEnd_toEndOf="@+id/llSize"
                         app:layout_constraintStart_toStartOf="@+id/llSize"
-                        app:layout_constraintTop_toBottomOf="@+id/llSize"
-                        tools:text="Марка автомобиля" />
+                        app:layout_constraintTop_toBottomOf="@+id/llSize" />
 
                     <EditText
                         android:id="@+id/etStateNumber"
@@ -234,12 +232,11 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:ems="10"
+                        android:hint="@string/state_number"
                         android:inputType="text"
-                        android:text="Name"
                         app:layout_constraintEnd_toEndOf="@+id/etAutoMark"
                         app:layout_constraintStart_toStartOf="@+id/etAutoMark"
-                        app:layout_constraintTop_toBottomOf="@+id/etAutoMark"
-                        tools:text="Гос номер" />
+                        app:layout_constraintTop_toBottomOf="@+id/etAutoMark" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -255,24 +252,21 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="CheckBox"
-                            tools:text="Задняя" />
+                            android:text="@string/rear" />
 
                         <CheckBox
                             android:id="@+id/cbSide"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="CheckBox"
-                            tools:text="Боковая" />
+                            android:text="@string/side" />
 
                         <CheckBox
                             android:id="@+id/cbTop"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="CheckBox"
-                            tools:text="Верхняя" />
+                            android:text="@string/top" />
                     </LinearLayout>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -290,7 +284,7 @@
                         android:id="@+id/tietBank"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        tools:text="Банк" />
+                        android:hint="Банк" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <CheckBox
@@ -298,10 +292,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="CheckBox"
+                    android:text="@string/accept_terms"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tilBank"
-                    tools:text="Принять условия" />
+                    app:layout_constraintTop_toBottomOf="@+id/tilBank" />
 
                 <Button
                     android:id="@+id/bOK"
@@ -309,12 +302,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:backgroundTint="@color/default_pink"
-                    android:text="Button"
+                    android:text="@string/ok"
                     app:cornerRadius="@dimen/button_corner_radius"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cbAcceptTerms"
-                    tools:text="ОК" />
+                    app:layout_constraintTop_toBottomOf="@+id/cbAcceptTerms" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>

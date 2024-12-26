@@ -64,7 +64,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:text="TextView"
+                android:text=""
                 app:layout_constraintStart_toEndOf="@+id/mcvAvatar"
                 app:layout_constraintTop_toTopOf="@+id/mcvAvatar"
                 tools:text="Johana Doe" />
@@ -94,7 +94,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text="TextView"
+                android:text=""
                 app:layout_constraintBottom_toBottomOf="@+id/ivCash"
                 app:layout_constraintStart_toEndOf="@+id/ivCash"
                 app:layout_constraintTop_toTopOf="@+id/ivCash"
@@ -162,7 +162,7 @@
                 android:id="@+id/tvOrderList"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView"
+                android:text="@string/order_list"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="Список заказов" />
@@ -189,21 +189,21 @@
                             android:id="@+id/tvDateTime"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="TextView"
+                            android:text="@string/date_and_time"
                             tools:text="Дата и время" />
 
                         <TextView
                             android:id="@+id/tvOrderDescription"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="TextView"
+                            android:text="@string/order_description"
                             tools:text="Описание заказа" />
 
                         <TextView
                             android:id="@+id/tvStatus"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="TextView"
+                            android:text="@string/status"
                             tools:text="Статус" />
                     </TableRow>
 

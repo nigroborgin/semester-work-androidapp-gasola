@@ -1,5 +1,64 @@
 <resources>
-    <string name="app_name">GasOla</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name">ГазОла</string>
+    <string name="login">Вход</string>
+    <string name="phone">Телефон</string>
+    <string name="get_sms">Получить СМС</string>
+    <string name="registration">Регистрация</string>
+    <string name="password_from_sms">Пароль из СМС</string>
+    <string name="to_login">Войти</string>
+    <string name="to_order">Заказать</string>
+    <string name="no">нет</string>
+    <string name="count_movers_1" translatable="false">1</string>
+    <string name="count_movers_2" translatable="false">2</string>
+    <string name="count_movers_3" translatable="false">3</string>
+    <string name="count_movers_4" translatable="false">4</string>
+    <string name="elevator">лифт</string>
+    <string name="intercom">домофон</string>
+    <string name="size_of_truck_body">Размер кузова</string>
+    <string name="track_body1" translatable="false">3</string>
+    <string name="truck_body2" translatable="false">4</string>
+    <string name="truck_body3" translatable="false">5</string>
+    <string name="truck_body4" translatable="false">6</string>
+    <string name="truck_body5">газель фермер</string>
+    <string name="movers">Грузчики</string>
+    <string name="back">Назад</string>
+    <string name="date_and_time">Дата и время</string>
+    <string name="nearest_time">Ближайшее время</string>
+    <string name="on_date">На дату</string>
+    <string name="addresses">Адреса</string>
+    <string name="Customer">Заказчик</string>
+    <string name="price_currency" translatable="false">₽</string>
+    <string name="Where">Куда</string>
+    <string name="WhereFrom">Откуда</string>
+    <string name="comment_from_driver">Комментарий от водителя</string>
+    <string name="arrived">Прибыл</string>
+    <string name="cancel">Отменить</string>
+    <string name="finished">Закончил</string>
+    <string name="take_order">Взять заказ</string>
+    <string name="add_point">добавить точку</string>
+    <string name="order_details">Детали заказа</string>
+    <string name="order_execution">Выполнение заказа</string>
+    <string name="order_description">Описание заказа</string>
+    <string name="order_list">Список заказов</string>
+    <string name="status">Статус</string>
+    <string name="pay_cash">Оплата наличными</string>
+    <string name="pay_by_qr_code">Оплата по QR-коду</string>
+    <string name="pay_order">Оплата заказа</string>
+    <string name="ok">ОК</string>
+    <string name="choose_photo">Выбрать фото</string>
+    <string name="accept_terms">Принять условия</string>
+    <string name="rear">Задняя</string>
+    <string name="side">Боковая</string>
+    <string name="top">Верхняя</string>
+    <string name="auto_mark">Марка автомобиля</string>
+    <string name="specify_phone_number">Укажите телефон</string>
+    <string name="car">Автомобиль</string>
+    <string name="state_number">Гос номер</string>
+    <string name="add_photo">Добавьте фото</string>
+    <string name="name">Имя</string>
+    <string name="phone_number">Телефон</string>
+    <string name="enter_name">Укажите имя</string>
+    <string name="length_meters">Длина, м</string>
+    <string name="width_meters">Ширина, м</string>
+    <string name="height_meters">Высота, м</string>
 </resources>
