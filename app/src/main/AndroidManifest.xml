@@ -13,9 +13,6 @@
         android:theme="@style/Theme.GasOla"
         tools:targetApi="31">
         <activity
-            android:name=".PayActivity"
-            android:exported="false" />
-        <activity
             android:name=".OrderListActivity"
             android:exported="true">
             <intent-filter>
@@ -25,19 +22,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".PayActivity"
-            android:exported="false" />
+            android:name=".OrderCreateActivity"
+            android:exported="false"></activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="false">
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
-        </activity>
+            android:name=".OrderPayActivity"
+            android:exported="false"></activity>
+        <activity
+            android:name=".OrderDetailsActivity"
+            android:exported="false"></activity>
     </application>
 
 </manifest>
