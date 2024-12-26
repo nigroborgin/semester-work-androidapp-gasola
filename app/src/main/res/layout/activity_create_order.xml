@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateOrderActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcvAvatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:clickable="true"
+                android:outlineAmbientShadowColor="@android:color/transparent"
+                android:outlineSpotShadowColor="@android:color/transparent"
+                app:cardBackgroundColor="@android:color/transparent"
+
+                app:cardCornerRadius="56dp"
+                app:cardForegroundColor="@android:color/transparent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:rippleColor="@android:color/transparent"
+                app:strokeColor="@android:color/transparent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clAvatar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imAvatar"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:srcCompat="@tools:sample/avatars" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/tvAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="TextView"
+                app:layout_constraintStart_toEndOf="@+id/mcvAvatar"
+                app:layout_constraintTop_toTopOf="@+id/mcvAvatar"
+                tools:text="Johana Doe" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/tvAccount"
+                app:layout_constraintTop_toBottomOf="@+id/tvAccount">
+
+                <ImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_arrow_back" />
+
+                <TextView
+                    android:id="@+id/tvBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivBack"
+                    app:layout_constraintStart_toEndOf="@+id/ivBack"
+                    app:layout_constraintTop_toTopOf="@+id/ivBack"
+                    tools:text="Назад" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clCash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivCash"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_wallet" />
+
+            <TextView
+                android:id="@+id/tvCach"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="TextView"
+                app:layout_constraintBottom_toBottomOf="@+id/ivCash"
+                app:layout_constraintStart_toEndOf="@+id/ivCash"
+                app:layout_constraintTop_toTopOf="@+id/ivCash"
+                tools:text="123" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clContent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/clFooter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clHeader">
+
+        <ScrollView
+            android:id="@+id/svDetails"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clDetails"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clDateTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tvDateTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Дата и время" />
+
+                    <RadioGroup
+                        android:id="@+id/rgDateTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvDateTime">
+
+                        <RadioButton
+                            android:id="@+id/rbNearestTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="RadioButton"
+                            tools:text="Ближайшее время" />
+
+                        <RadioButton
+                            android:id="@+id/rbOnDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="RadioButton"
+                            tools:text="На дату" />
+                    </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/editTextDate2"
+                        style="@style/Widget.AppCompat.AutoCompleteTextView"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="date"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/rgDateTime"
+                        tools:text="12/20/2024" />
+
+                    <EditText
+                        android:id="@+id/editTextTime2"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:ems="10"
+                        android:inputType="time"
+                        app:layout_constraintBottom_toBottomOf="@+id/editTextDate2"
+                        app:layout_constraintStart_toEndOf="@+id/editTextDate2"
+                        tools:text="12" />
+
+                    <EditText
+                        android:id="@+id/editTextTime"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:ems="10"
+                        android:inputType="time"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/editTextTime2"
+                        tools:text="30" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clAddresses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/clDateTime">
+
+                    <TextView
+                        android:id="@+id/tvAdresses"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Адреса" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clWhereFrom"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvAdresses">
+
+                        <TextView
+                            android:id="@+id/tvWhereFrom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="TextView"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="Откуда" />
+
+                        <EditText
+                            android:id="@+id/etAddress"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="text"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tvWhereFrom"
+                            tools:text="Йошкар-Ола, ул. Чехова, д. 31" />
+
+                        <EditText
+                            android:id="@+id/etFlat"
+                            android:layout_width="95dp"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="text"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/etAddress"
+                            tools:text="Квартира" />
+
+                        <EditText
+                            android:id="@+id/etFloor"
+                            android:layout_width="95dp"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="text"
+                            app:layout_constraintBottom_toBottomOf="@+id/etFlat"
+                            app:layout_constraintStart_toEndOf="@+id/etFlat"
+                            app:layout_constraintTop_toTopOf="@+id/etFlat"
+                            tools:text="Этаж" />
+
+                        <EditText
+                            android:id="@+id/etEntrance"
+                            android:layout_width="95dp"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="text"
+                            app:layout_constraintBottom_toBottomOf="@+id/etFloor"
+                            app:layout_constraintStart_toEndOf="@+id/etFloor"
+                            app:layout_constraintTop_toTopOf="@+id/etFloor"
+                            tools:text="Подъезд" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/clCheckBoxes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toEndOf="@+id/etEntrance"
+                            app:layout_constraintTop_toTopOf="@+id/etEntrance">
+
+                            <CheckBox
+                                android:id="@+id/cbElevator"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="CheckBox"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:text="лифт" />
+
+                            <CheckBox
+                                android:id="@+id/cbIntercom"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="CheckBox"
+                                app:layout_constraintStart_toStartOf="@+id/cbElevator"
+                                app:layout_constraintTop_toBottomOf="@+id/cbElevator"
+                                tools:text="домофон" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clWhere"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/clWhereFrom">
+
+                        <TextView
+                            android:id="@+id/tvWhere"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="TextView"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="Куда" />
+
+                        <EditText
+                            android:id="@+id/etAddress2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="text"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tvWhere"
+                            tools:text="Йошкар-Ола, ул. Чехова, д. 31" />
+
+                        <EditText
+                            android:id="@+id/etFlat2"
+                            android:layout_width="95dp"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="text"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/etAddress2"
+                            tools:text="Квартира" />
+
+                        <EditText
+                            android:id="@+id/etFloor2"
+                            android:layout_width="95dp"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="text"
+                            app:layout_constraintBottom_toBottomOf="@+id/etFlat2"
+                            app:layout_constraintStart_toEndOf="@+id/etFlat2"
+                            app:layout_constraintTop_toTopOf="@+id/etFlat2"
+                            tools:text="Этаж" />
+
+                        <EditText
+                            android:id="@+id/etEntrance2"
+                            android:layout_width="95dp"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="text"
+                            app:layout_constraintBottom_toBottomOf="@+id/etFloor2"
+                            app:layout_constraintStart_toEndOf="@+id/etFloor2"
+                            app:layout_constraintTop_toTopOf="@+id/etFloor2"
+                            tools:text="Подъезд" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/clCheckBoxes2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toEndOf="@+id/etEntrance2"
+                            app:layout_constraintTop_toTopOf="@+id/etEntrance2">
+
+                            <CheckBox
+                                android:id="@+id/cbElevator2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="CheckBox"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:text="лифт" />
+
+                            <CheckBox
+                                android:id="@+id/cbIntercom2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="CheckBox"
+                                app:layout_constraintStart_toStartOf="@+id/cbElevator2"
+                                app:layout_constraintTop_toBottomOf="@+id/cbElevator2"
+                                tools:text="домофон" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clSizeTruckBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/clAddresses">
+
+                    <TextView
+                        android:id="@+id/tvTruckBody"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Размер кузова" />
+
+                    <CheckBox
+                        android:id="@+id/cbTruckBody1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CheckBox"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvTruckBody"
+                        tools:text="3" />
+
+                    <CheckBox
+                        android:id="@+id/cbTruckBody2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CheckBox"
+                        app:layout_constraintBottom_toBottomOf="@+id/cbTruckBody1"
+                        app:layout_constraintStart_toEndOf="@+id/cbTruckBody1"
+                        app:layout_constraintTop_toTopOf="@+id/cbTruckBody1"
+                        tools:text="4" />
+
+                    <CheckBox
+                        android:id="@+id/cbTruckBody3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CheckBox"
+                        app:layout_constraintBottom_toBottomOf="@+id/cbTruckBody2"
+                        app:layout_constraintStart_toEndOf="@+id/cbTruckBody2"
+                        app:layout_constraintTop_toTopOf="@+id/cbTruckBody2"
+                        tools:text="5" />
+
+                    <CheckBox
+                        android:id="@+id/cbTruckBody4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CheckBox"
+                        app:layout_constraintBottom_toBottomOf="@+id/cbTruckBody3"
+                        app:layout_constraintStart_toEndOf="@+id/cbTruckBody3"
+                        app:layout_constraintTop_toTopOf="@+id/cbTruckBody3"
+                        tools:text="6" />
+
+                    <CheckBox
+                        android:id="@+id/cbTruckBody5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CheckBox"
+                        app:layout_constraintBottom_toBottomOf="@+id/cbTruckBody4"
+                        app:layout_constraintStart_toEndOf="@+id/cbTruckBody4"
+                        app:layout_constraintTop_toTopOf="@+id/cbTruckBody4"
+                        tools:text="газель фермер" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clCountMovers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/clSizeTruckBody">
+
+                    <TextView
+                        android:id="@+id/tvMovers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Грузчики" />
+
+                    <CheckBox
+                        android:id="@+id/cbCountMovers1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CheckBox"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvMovers"
+                        tools:text="1" />
+
+                    <CheckBox
+                        android:id="@+id/cbCountMovers2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="CheckBox"
+                        app:layout_constraintBottom_toBottomOf="@+id/cbCountMovers1"
+                        app:layout_constraintStart_toEndOf="@+id/cbCountMovers1"
+                        app:layout_constraintTop_toTopOf="@+id/cbCountMovers1"
+                        tools:text="2" />
+
+                    <CheckBox
+                        android:id="@+id/cbCountMovers3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CheckBox"
+                        app:layout_constraintBottom_toBottomOf="@+id/cbCountMovers2"
+                        app:layout_constraintStart_toEndOf="@+id/cbCountMovers2"
+                        app:layout_constraintTop_toTopOf="@+id/cbCountMovers2"
+                        tools:text="3" />
+
+                    <CheckBox
+                        android:id="@+id/cbCountMovers4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CheckBox"
+                        app:layout_constraintBottom_toBottomOf="@+id/cbCountMovers3"
+                        app:layout_constraintStart_toEndOf="@+id/cbCountMovers3"
+                        app:layout_constraintTop_toTopOf="@+id/cbCountMovers3"
+                        tools:text="4" />
+
+                    <CheckBox
+                        android:id="@+id/cbCountMovers0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CheckBox"
+                        app:layout_constraintBottom_toBottomOf="@+id/cbCountMovers4"
+                        app:layout_constraintStart_toEndOf="@+id/cbCountMovers4"
+                        app:layout_constraintTop_toTopOf="@+id/cbCountMovers4"
+                        tools:text="нет" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clCustomer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/clCountMovers">
+
+                    <TextView
+                        android:id="@+id/tvCustomer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Заказчик" />
+
+                    <EditText
+                        android:id="@+id/etName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="text"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvCustomer"
+                        tools:text="Имя" />
+
+                    <TextView
+                        android:id="@+id/tvPayForm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Форма оплаты (Поменять)"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/etName" />
+
+                    <EditText
+                        android:id="@+id/etPhoneCustomer1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="phone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvPayForm"
+                        tools:text="Телефон заказчика 1" />
+
+                    <EditText
+                        android:id="@+id/etPhoneCustomer2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="phone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/etPhoneCustomer1"
+                        tools:text="Телефон заказчика 2" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tietOrderDescription"
+                        android:layout_width="0dp"
+                        android:layout_height="140dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/etPhoneCustomer2"
+                        tools:text="Описание заказа" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clFooter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clOrderStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivPrice"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/tvPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="TextView"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivPrice"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.545"
+                    tools:text="3500" />
+
+                <TextView
+                    android:id="@+id/tvPriceCurrency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:text="TextView"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvPrice"
+                    app:layout_constraintStart_toEndOf="@+id/tvPrice"
+                    app:layout_constraintTop_toTopOf="@+id/tvPrice"
+                    tools:text="₽" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/bTakeOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:backgroundTint="#5AB75C"
+                android:text="Button"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="@+id/clPrice"
+                app:layout_constraintStart_toStartOf="@+id/clPrice"
+                app:layout_constraintTop_toBottomOf="@+id/clPrice"
+                tools:text="Заказать" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
