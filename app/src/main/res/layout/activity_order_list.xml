@@ -121,7 +121,7 @@
             android:layout_weight="1"
             android:backgroundTint="@android:color/transparent"
             android:textColor="@color/black"
-            app:cornerRadius="3dp"
+            app:cornerRadius="@dimen/button_corner_radius"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -240,7 +240,7 @@
                 android:layout_weight="1"
                 android:backgroundTint="@android:color/transparent"
                 android:textColor="@color/black"
-                app:cornerRadius="3dp"
+                app:cornerRadius="@dimen/button_corner_radius"
                 app:strokeColor="@color/material_dynamic_neutral80"
                 app:strokeWidth="1dp"
                 tools:text="Добавить заказ" />
@@ -252,7 +252,7 @@
                 android:layout_weight="1"
                 android:backgroundTint="@android:color/transparent"
                 android:textColor="@color/black"
-                app:cornerRadius="3dp"
+                app:cornerRadius="@dimen/button_corner_radius"
                 app:strokeColor="@color/material_dynamic_neutral80"
                 app:strokeWidth="1dp"
                 tools:text="История" />
@@ -264,7 +264,7 @@
                 android:layout_weight="1"
                 android:backgroundTint="@android:color/transparent"
                 android:textColor="@color/black"
-                app:cornerRadius="3dp"
+                app:cornerRadius="@dimen/button_corner_radius"
                 app:strokeColor="@color/material_dynamic_neutral80"
                 app:strokeWidth="1dp"
                 tools:text="Текущие заказы" />

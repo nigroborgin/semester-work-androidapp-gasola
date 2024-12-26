@@ -200,6 +200,7 @@
                     app:layout_constraintTop_toTopOf="@+id/ivAddMapPoint">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tietAddPoint"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
                         android:hint="добавить точку" />
@@ -279,7 +280,7 @@
             android:id="@+id/clOrderStart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="gone"
+            android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -330,9 +331,10 @@
                 android:id="@+id/bTakeOrder"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:backgroundTint="#FC8C01"
+                android:backgroundTint="@color/yellow"
                 android:text="Button"
                 android:textSize="11sp"
+                app:cornerRadius="@dimen/button_corner_radius"
                 app:layout_constraintEnd_toEndOf="@+id/clPrice"
                 app:layout_constraintStart_toStartOf="@+id/clPrice"
                 app:layout_constraintTop_toBottomOf="@+id/clPrice"
@@ -343,7 +345,7 @@
             android:id="@+id/clOrderFinish"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="visible"
+            android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -376,8 +378,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
-                    android:backgroundTint="#D6534D"
+                    android:backgroundTint="@color/light_red"
                     android:text="Button"
+                    app:cornerRadius="@dimen/button_corner_radius"
                     tools:text="Закончил" />
 
                 <Button
@@ -385,16 +388,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
-                    android:backgroundTint="#2E7C31"
+                    android:backgroundTint="@color/green"
                     android:text="Button"
+                    app:cornerRadius="@dimen/button_corner_radius"
                     tools:text="Прибыл" />
 
                 <Button
                     android:id="@+id/bCancel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="#FC8C01"
+                    android:backgroundTint="@color/yellow"
                     android:text="Button"
+                    app:cornerRadius="@dimen/button_corner_radius"
                     tools:text="Отменить" />
             </LinearLayout>
 
