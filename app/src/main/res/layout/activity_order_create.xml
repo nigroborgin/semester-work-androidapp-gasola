@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OrderCreateActivity">
+    tools:context=".activity.OrderCreateActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clHeader"
@@ -120,11 +120,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text=""
+                android:text="0"
                 app:layout_constraintBottom_toBottomOf="@+id/ivCash"
                 app:layout_constraintStart_toEndOf="@+id/ivCash"
-                app:layout_constraintTop_toTopOf="@+id/ivCash"
-                tools:text="123" />
+                app:layout_constraintTop_toTopOf="@+id/ivCash" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -191,7 +190,7 @@
                     </RadioGroup>
 
                     <EditText
-                        android:id="@+id/editTextDate2"
+                        android:id="@+id/etDate"
                         style="@style/Widget.AppCompat.AutoCompleteTextView"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
@@ -202,18 +201,18 @@
                         app:layout_constraintTop_toBottomOf="@+id/rgDateTime" />
 
                     <EditText
-                        android:id="@+id/editTextTime2"
+                        android:id="@+id/etTimeHours"
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="32dp"
                         android:ems="10"
                         android:hint="12"
                         android:inputType="time"
-                        app:layout_constraintBottom_toBottomOf="@+id/editTextDate2"
-                        app:layout_constraintStart_toEndOf="@+id/editTextDate2" />
+                        app:layout_constraintBottom_toBottomOf="@+id/etDate"
+                        app:layout_constraintStart_toEndOf="@+id/etDate" />
 
                     <EditText
-                        android:id="@+id/editTextTime"
+                        android:id="@+id/etTimeMinutes"
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="32dp"
@@ -221,7 +220,7 @@
                         android:hint="30"
                         android:inputType="time"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/editTextTime2" />
+                        app:layout_constraintStart_toEndOf="@+id/etTimeHours" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -644,12 +643,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:text=""
+                    android:text="0"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/ivPrice"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.545"
-                    tools:text="3500" />
+                    app:layout_constraintVertical_bias="0.545" />
 
                 <TextView
                     android:id="@+id/tvPriceCurrency"
@@ -668,13 +666,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="45dp"
                 android:backgroundTint="@color/light_green"
+                android:onClick="onClickGoOrderPay"
                 android:text="@string/to_order"
                 android:textSize="11sp"
                 app:cornerRadius="@dimen/button_corner_radius"
                 app:layout_constraintEnd_toEndOf="@+id/clPrice"
                 app:layout_constraintStart_toStartOf="@+id/clPrice"
-                app:layout_constraintTop_toBottomOf="@+id/clPrice"
-                tools:text="Заказать" />
+                app:layout_constraintTop_toBottomOf="@+id/clPrice" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

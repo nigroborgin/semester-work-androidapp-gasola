@@ -14,41 +14,38 @@
         tools:targetApi="31">
 
         <activity
-            android:name=".RegistrationActivity"
+            android:name=".activity.RegistrationActivity"
             android:exported="false">
-
         </activity>
 
         <activity
-            android:name=".LoginActivity"
+            android:name=".activity.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
         <activity
-            android:name=".OrderListActivity"
+            android:name=".activity.OrderListActivity"
             android:exported="false">
         </activity>
 
         <activity
-            android:name=".OrderCreateActivity"
+            android:name=".activity.OrderCreateActivity"
             android:exported="false">
-
         </activity>
 
         <activity
-            android:name=".OrderPayActivity"
+            android:name=".activity.OrderPayActivity"
             android:exported="false">
-
         </activity>
 
         <activity
-            android:name=".OrderDetailsActivity"
+            android:name=".activity.OrderDetailsActivity"
             android:exported="false">
-
         </activity>
 
     </application>

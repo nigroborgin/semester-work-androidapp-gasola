@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OrderPayActivity">
+    tools:context=".activity.OrderPayActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clHeader"
@@ -120,11 +120,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text=""
+                android:text="0"
                 app:layout_constraintBottom_toBottomOf="@+id/ivCash"
                 app:layout_constraintStart_toEndOf="@+id/ivCash"
-                app:layout_constraintTop_toTopOf="@+id/ivCash"
-                tools:text="123" />
+                app:layout_constraintTop_toTopOf="@+id/ivCash" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -145,7 +144,10 @@
             android:id="@+id/tvPayOrder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
             android:text="@string/pay_order"
+            android:textFontWeight="600"
+            android:textSize="@dimen/text_sise_title"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Оплата заказа" />
@@ -166,19 +168,18 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@drawable/ic_cart" />
+                app:srcCompat="@drawable/ic_cart" />
 
             <TextView
                 android:id="@+id/tvPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text=""
+                android:text="0"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivPrice"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.545"
-                tools:text="3500" />
+                app:layout_constraintVertical_bias="0.545" />
 
             <TextView
                 android:id="@+id/tvPriceCurrency"
@@ -224,6 +225,7 @@
                     android:layout_height="0dp"
                     android:layout_marginStart="5dp"
                     android:backgroundTint="@android:color/transparent"
+                    android:onClick="onClickPayByQrCode"
                     android:text="@string/pay_by_qr_code"
                     android:textColor="@color/black"
                     app:cornerRadius="@dimen/button_corner_radius"
@@ -260,6 +262,7 @@
                     android:layout_height="0dp"
                     android:layout_marginStart="5dp"
                     android:backgroundTint="@android:color/transparent"
+                    android:onClick="onClickPayByCash"
                     android:text="@string/pay_cash"
                     android:textColor="@color/black"
                     app:cornerRadius="@dimen/button_corner_radius"
@@ -267,8 +270,7 @@
                     app:layout_constraintStart_toEndOf="@+id/ivPayCash"
                     app:layout_constraintTop_toTopOf="@+id/ivPayCash"
                     app:strokeColor="@color/material_dynamic_neutral80"
-                    app:strokeWidth="1dp"
-                    tools:text="Оплата наличными" />
+                    app:strokeWidth="1dp" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

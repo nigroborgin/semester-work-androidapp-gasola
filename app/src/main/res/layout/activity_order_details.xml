@@ -5,7 +5,7 @@
     android:id="@+id/clMain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OrderDetailsActivity">
+    tools:context=".activity.OrderDetailsActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clHeader"
@@ -120,11 +120,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text=""
+                android:text="0"
                 app:layout_constraintBottom_toBottomOf="@+id/ivCash"
                 app:layout_constraintStart_toEndOf="@+id/ivCash"
-                app:layout_constraintTop_toTopOf="@+id/ivCash"
-                tools:text="123" />
+                app:layout_constraintTop_toTopOf="@+id/ivCash" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -157,54 +156,66 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/tvOrderExecution"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="@string/order_execution"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ivMap"
-                tools:text="Выполнение заказа" />
-
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/clAddMapPoint"
+                android:id="@+id/clOrderExecution"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="30dp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/tvOrderExecution"
-                app:layout_constraintTop_toBottomOf="@+id/tvOrderExecution">
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivMap">
 
-                <ImageView
-                    android:id="@+id/ivAddMapPoint"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                <TextView
+                    android:id="@+id/tvOrderExecution"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/order_execution"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/text_sise_title"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_plus" />
+                    tools:text="Выполнение заказа" />
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/tilAddMapPoint"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clAddMapPoint"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="@+id/ivAddMapPoint"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/ivAddMapPoint"
-                    app:layout_constraintTop_toTopOf="@+id/ivAddMapPoint">
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvOrderExecution">
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/tietAddPoint"
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:hint="@string/add_point" />
-                </com.google.android.material.textfield.TextInputLayout>
+                    <ImageView
+                        android:id="@+id/ivAddMapPoint"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_plus" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilAddMapPoint"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivAddMapPoint"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ivAddMapPoint"
+                        app:layout_constraintTop_toTopOf="@+id/ivAddMapPoint">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tietAddPoint"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:hint="@string/add_point" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -223,7 +234,10 @@
                 android:id="@+id/tvDetails"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
                 android:text="@string/order_details"
+                android:textFontWeight="600"
+                android:textSize="@dimen/text_sise_title"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="Детали заказа" />
@@ -308,12 +322,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:text=""
+                    android:text="0"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/ivPrice"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.545"
-                    tools:text="3500" />
+                    app:layout_constraintVertical_bias="0.545" />
 
                 <TextView
                     android:id="@+id/tvPriceCurrency"
@@ -332,6 +345,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:backgroundTint="@color/yellow"
+                android:onClick="onClickTakeOrder"
                 android:text="@string/take_order"
                 android:textSize="11sp"
                 app:cornerRadius="@dimen/button_corner_radius"
@@ -398,6 +412,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/yellow"
+                    android:onClick="onClickCancel"
                     android:text="@string/cancel"
                     app:cornerRadius="@dimen/button_corner_radius"
                     tools:text="Отменить" />

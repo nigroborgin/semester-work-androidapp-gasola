@@ -1,5 +1,6 @@
-package ru.marsu.gasola
+package ru.marsu.gasola.activity
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import ru.marsu.gasola.databinding.ActivityRegistrationBinding
@@ -12,6 +13,13 @@ class RegistrationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRegistrationBinding.inflate(layoutInflater)
         setContentView(binding.root)
+    }
+
+    fun onClickRegistrateAndGoOrderList() {
+        // TODO: implement registration
+
+        val intent = Intent(this, OrderListActivity::class.java)
+        startActivity(intent)
     }
 
 }

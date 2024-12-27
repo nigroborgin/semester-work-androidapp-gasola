@@ -5,7 +5,7 @@
     android:id="@+id/clMain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OrderListActivity">
+    tools:context=".activity.OrderListActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clHeader"
@@ -94,11 +94,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text=""
+                android:text="0"
                 app:layout_constraintBottom_toBottomOf="@+id/ivCash"
                 app:layout_constraintStart_toEndOf="@+id/ivCash"
-                app:layout_constraintTop_toTopOf="@+id/ivCash"
-                tools:text="123" />
+                app:layout_constraintTop_toTopOf="@+id/ivCash" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -120,14 +119,15 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="@android:color/transparent"
+            android:onClick="onClickUpdate"
+            android:text="@string/update"
             android:textColor="@color/black"
             app:cornerRadius="@dimen/button_corner_radius"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:strokeColor="@color/material_dynamic_neutral80"
-            app:strokeWidth="1dp"
-            android:text="@string/update" />
+            app:strokeWidth="1dp" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/clMap"
@@ -162,7 +162,10 @@
                 android:id="@+id/tvOrderList"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
                 android:text="@string/order_list"
+                android:textFontWeight="600"
+                android:textSize="@dimen/text_sise_title"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="Список заказов" />
@@ -239,11 +242,12 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="@android:color/transparent"
+                android:onClick="onClickGoOrderCreate"
+                android:text="@string/add_order"
                 android:textColor="@color/black"
                 app:cornerRadius="@dimen/button_corner_radius"
                 app:strokeColor="@color/material_dynamic_neutral80"
-                app:strokeWidth="1dp"
-                android:text="@string/add_order" />
+                app:strokeWidth="1dp" />
 
             <Button
                 android:id="@+id/bHistoryOrders"
@@ -251,11 +255,12 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="@android:color/transparent"
+                android:onClick="onClickGoOrderHistory"
+                android:text="@string/history"
                 android:textColor="@color/black"
                 app:cornerRadius="@dimen/button_corner_radius"
                 app:strokeColor="@color/material_dynamic_neutral80"
-                app:strokeWidth="1dp"
-                android:text="@string/history" />
+                app:strokeWidth="1dp" />
 
             <Button
                 android:id="@+id/bCurrentOrders"
@@ -263,11 +268,12 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="@android:color/transparent"
+                android:onClick="onClickGoCurrentOrders"
+                android:text="@string/current_orders"
                 android:textColor="@color/black"
                 app:cornerRadius="@dimen/button_corner_radius"
                 app:strokeColor="@color/material_dynamic_neutral80"
-                app:strokeWidth="1dp"
-                android:text="@string/current_orders" />
+                app:strokeWidth="1dp" />
 
         </LinearLayout>
 
