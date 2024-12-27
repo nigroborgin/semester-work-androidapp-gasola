@@ -37,4 +37,8 @@ class OrderDetailsActivity : AppCompatActivity() {
         binding.clOrderExecution.visibility = View.GONE
     }
 
+    fun onClickBack(view: View) {
+        onBackPressedDispatcher.onBackPressed()
+    }
+
 }

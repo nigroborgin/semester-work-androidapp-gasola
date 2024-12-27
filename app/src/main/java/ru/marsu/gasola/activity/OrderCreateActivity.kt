@@ -21,4 +21,8 @@ class OrderCreateActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    fun onClickBack(view: View) {
+        onBackPressedDispatcher.onBackPressed()
+    }
+
 }

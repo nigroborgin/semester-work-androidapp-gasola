@@ -23,4 +23,8 @@ class OrderPayActivity : AppCompatActivity() {
         // TODO: implement Pay by Cash
     }
 
+    fun onClickBack(view: View) {
+        onBackPressedDispatcher.onBackPressed()
+    }
+
 }
