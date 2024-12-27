@@ -61,4 +61,14 @@
     <string name="length_meters">Длина, м</string>
     <string name="width_meters">Ширина, м</string>
     <string name="height_meters">Высота, м</string>
+    <string name="bank">Банк</string>
+    <string name="update">Обновить</string>
+    <string name="add_order">Добавить заказ</string>
+    <string name="history">История</string>
+    <string name="current_orders">Текущие заказы</string>
+    <string name="entrance">Подъезд</string>
+    <string name="flat">Квартира</string>
+    <string name="floor">Этаж</string>
+    <string name="customers_phone_number2">Телефон заказчика 2</string>
+    <string name="customers_phone_number1">Телефон заказчика 1</string>
 </resources>

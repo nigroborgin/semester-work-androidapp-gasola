@@ -52,4 +52,14 @@
     <string name="length_meters">Length, m</string>
     <string name="width_meters">Width, m</string>
     <string name="height_meters">Height, m</string>
+    <string name="bank">Bank</string>
+    <string name="update">Update</string>
+    <string name="add_order">Add order</string>
+    <string name="history">History</string>
+    <string name="current_orders">Current orders</string>
+    <string name="entrance">Entrance</string>
+    <string name="flat">Flat</string>
+    <string name="floor">Floor</string>
+    <string name="customers_phone_number2">Customers phone number 2</string>
+    <string name="customers_phone_number1">Customers phone number 1</string>
 </resources>

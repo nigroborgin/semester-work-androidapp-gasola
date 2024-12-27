@@ -12,30 +12,46 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GasOla"
         tools:targetApi="31">
+
         <activity
             android:name=".RegistrationActivity"
-            android:exported="false" />
+            android:exported="false">
+
+        </activity>
+
         <activity
             android:name=".LoginActivity"
-            android:exported="false" />
+            android:exported="false">
+
+        </activity>
+
         <activity
             android:name=".OrderListActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".OrderCreateActivity"
-            android:exported="false" />
+            android:exported="false">
+
+        </activity>
+
         <activity
             android:name=".OrderPayActivity"
-            android:exported="false" />
+            android:exported="false">
+
+        </activity>
+
         <activity
             android:name=".OrderDetailsActivity"
-            android:exported="false" />
+            android:exported="false">
+
+        </activity>
+
     </application>
 
 </manifest>

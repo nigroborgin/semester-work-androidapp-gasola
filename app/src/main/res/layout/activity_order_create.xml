@@ -64,7 +64,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:text=""
+                android:text="Johana Doe"
                 app:layout_constraintStart_toEndOf="@+id/mcvAvatar"
                 app:layout_constraintTop_toTopOf="@+id/mcvAvatar"
                 tools:text="Johana Doe" />
@@ -168,8 +168,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/date_and_time"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:text="Дата и время" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <RadioGroup
                         android:id="@+id/rgDateTime"
@@ -182,15 +181,13 @@
                             android:id="@+id/rbNearestTime"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/nearest_time"
-                            tools:text="Ближайшее время" />
+                            android:text="@string/nearest_time" />
 
                         <RadioButton
                             android:id="@+id/rbOnDate"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/on_date"
-                            tools:text="На дату" />
+                            android:text="@string/on_date" />
                     </RadioGroup>
 
                     <EditText
@@ -199,10 +196,10 @@
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:ems="10"
+                        android:hint="12/20/2024"
                         android:inputType="date"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/rgDateTime"
-                        tools:text="12/20/2024" />
+                        app:layout_constraintTop_toBottomOf="@+id/rgDateTime" />
 
                     <EditText
                         android:id="@+id/editTextTime2"
@@ -210,10 +207,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="32dp"
                         android:ems="10"
+                        android:hint="12"
                         android:inputType="time"
                         app:layout_constraintBottom_toBottomOf="@+id/editTextDate2"
-                        app:layout_constraintStart_toEndOf="@+id/editTextDate2"
-                        tools:text="12" />
+                        app:layout_constraintStart_toEndOf="@+id/editTextDate2" />
 
                     <EditText
                         android:id="@+id/editTextTime"
@@ -221,10 +218,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="32dp"
                         android:ems="10"
+                        android:hint="30"
                         android:inputType="time"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/editTextTime2"
-                        tools:text="30" />
+                        app:layout_constraintStart_toEndOf="@+id/editTextTime2" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -240,8 +237,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/addresses"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:text="Адреса" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/clWhereFrom"
@@ -256,51 +252,50 @@
                             android:layout_height="wrap_content"
                             android:text="@string/WhereFrom"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            tools:text="Откуда" />
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <EditText
                             android:id="@+id/etAddress"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:ems="10"
+                            android:hint="Йошкар-Ола, ул. Чехова, д. 31"
                             android:inputType="text"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/tvWhereFrom"
-                            tools:text="Йошкар-Ола, ул. Чехова, д. 31" />
+                            app:layout_constraintTop_toBottomOf="@+id/tvWhereFrom" />
 
                         <EditText
                             android:id="@+id/etFlat"
                             android:layout_width="95dp"
                             android:layout_height="wrap_content"
                             android:ems="10"
+                            android:hint="@string/flat"
                             android:inputType="text"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/etAddress"
-                            tools:text="Квартира" />
+                            app:layout_constraintTop_toBottomOf="@+id/etAddress" />
 
                         <EditText
                             android:id="@+id/etFloor"
                             android:layout_width="95dp"
                             android:layout_height="wrap_content"
                             android:ems="10"
+                            android:hint="@string/floor"
                             android:inputType="text"
                             app:layout_constraintBottom_toBottomOf="@+id/etFlat"
                             app:layout_constraintStart_toEndOf="@+id/etFlat"
-                            app:layout_constraintTop_toTopOf="@+id/etFlat"
-                            tools:text="Этаж" />
+                            app:layout_constraintTop_toTopOf="@+id/etFlat" />
 
                         <EditText
                             android:id="@+id/etEntrance"
                             android:layout_width="95dp"
                             android:layout_height="wrap_content"
                             android:ems="10"
+                            android:hint="@string/entrance"
                             android:inputType="text"
                             app:layout_constraintBottom_toBottomOf="@+id/etFloor"
                             app:layout_constraintStart_toEndOf="@+id/etFloor"
-                            app:layout_constraintTop_toTopOf="@+id/etFloor"
-                            tools:text="Подъезд" />
+                            app:layout_constraintTop_toTopOf="@+id/etFloor" />
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:id="@+id/clCheckBoxes"
@@ -315,8 +310,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/elevator"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"
-                                tools:text="лифт" />
+                                app:layout_constraintTop_toTopOf="parent" />
 
                             <CheckBox
                                 android:id="@+id/cbIntercom"
@@ -324,8 +318,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/intercom"
                                 app:layout_constraintStart_toStartOf="@+id/cbElevator"
-                                app:layout_constraintTop_toBottomOf="@+id/cbElevator"
-                                tools:text="домофон" />
+                                app:layout_constraintTop_toBottomOf="@+id/cbElevator" />
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -343,50 +336,49 @@
                             android:layout_height="wrap_content"
                             android:text="@string/Where"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            tools:text="Куда" />
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <EditText
                             android:id="@+id/etAddress2"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:ems="10"
+                            android:hint="Йошкар-Ола, ул. Чехова, д. 31"
                             android:inputType="text"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/tvWhere"
-                            tools:text="Йошкар-Ола, ул. Чехова, д. 31" />
+                            app:layout_constraintTop_toBottomOf="@+id/tvWhere" />
 
                         <EditText
                             android:id="@+id/etFlat2"
                             android:layout_width="95dp"
                             android:layout_height="wrap_content"
                             android:ems="10"
+                            android:hint="@string/flat"
                             android:inputType="text"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/etAddress2"
-                            tools:text="Квартира" />
+                            app:layout_constraintTop_toBottomOf="@+id/etAddress2" />
 
                         <EditText
                             android:id="@+id/etFloor2"
                             android:layout_width="95dp"
                             android:layout_height="wrap_content"
                             android:ems="10"
+                            android:hint="@string/floor"
                             android:inputType="text"
                             app:layout_constraintBottom_toBottomOf="@+id/etFlat2"
                             app:layout_constraintStart_toEndOf="@+id/etFlat2"
-                            app:layout_constraintTop_toTopOf="@+id/etFlat2"
-                            tools:text="Этаж" />
+                            app:layout_constraintTop_toTopOf="@+id/etFlat2" />
 
                         <EditText
                             android:id="@+id/etEntrance2"
                             android:layout_width="95dp"
                             android:layout_height="wrap_content"
                             android:ems="10"
+                            android:hint="@string/entrance"
                             android:inputType="text"
                             app:layout_constraintBottom_toBottomOf="@+id/etFloor2"
                             app:layout_constraintStart_toEndOf="@+id/etFloor2"
-                            app:layout_constraintTop_toTopOf="@+id/etFloor2"
-                            tools:text="Подъезд" />
+                            app:layout_constraintTop_toTopOf="@+id/etFloor2" />
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:id="@+id/clCheckBoxes2"
@@ -401,8 +393,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/elevator"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"
-                                tools:text="лифт" />
+                                app:layout_constraintTop_toTopOf="parent" />
 
                             <CheckBox
                                 android:id="@+id/cbIntercom2"
@@ -410,8 +401,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/intercom"
                                 app:layout_constraintStart_toStartOf="@+id/cbElevator2"
-                                app:layout_constraintTop_toBottomOf="@+id/cbElevator2"
-                                tools:text="домофон" />
+                                app:layout_constraintTop_toBottomOf="@+id/cbElevator2" />
                         </androidx.constraintlayout.widget.ConstraintLayout>
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -430,8 +420,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/size_of_truck_body"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:text="Размер кузова" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <CheckBox
                         android:id="@+id/cbTruckBody1"
@@ -439,8 +428,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/track_body1"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tvTruckBody"
-                        tools:text="3" />
+                        app:layout_constraintTop_toBottomOf="@+id/tvTruckBody" />
 
                     <CheckBox
                         android:id="@+id/cbTruckBody2"
@@ -449,8 +437,7 @@
                         android:text="@string/truck_body2"
                         app:layout_constraintBottom_toBottomOf="@+id/cbTruckBody1"
                         app:layout_constraintStart_toEndOf="@+id/cbTruckBody1"
-                        app:layout_constraintTop_toTopOf="@+id/cbTruckBody1"
-                        tools:text="4" />
+                        app:layout_constraintTop_toTopOf="@+id/cbTruckBody1" />
 
                     <CheckBox
                         android:id="@+id/cbTruckBody3"
@@ -459,8 +446,7 @@
                         android:text="@string/truck_body3"
                         app:layout_constraintBottom_toBottomOf="@+id/cbTruckBody2"
                         app:layout_constraintStart_toEndOf="@+id/cbTruckBody2"
-                        app:layout_constraintTop_toTopOf="@+id/cbTruckBody2"
-                        tools:text="5" />
+                        app:layout_constraintTop_toTopOf="@+id/cbTruckBody2" />
 
                     <CheckBox
                         android:id="@+id/cbTruckBody4"
@@ -469,8 +455,7 @@
                         android:text="@string/truck_body4"
                         app:layout_constraintBottom_toBottomOf="@+id/cbTruckBody3"
                         app:layout_constraintStart_toEndOf="@+id/cbTruckBody3"
-                        app:layout_constraintTop_toTopOf="@+id/cbTruckBody3"
-                        tools:text="6" />
+                        app:layout_constraintTop_toTopOf="@+id/cbTruckBody3" />
 
                     <CheckBox
                         android:id="@+id/cbTruckBody5"
@@ -479,8 +464,7 @@
                         android:text="@string/truck_body5"
                         app:layout_constraintBottom_toBottomOf="@+id/cbTruckBody4"
                         app:layout_constraintStart_toEndOf="@+id/cbTruckBody4"
-                        app:layout_constraintTop_toTopOf="@+id/cbTruckBody4"
-                        tools:text="газель фермер" />
+                        app:layout_constraintTop_toTopOf="@+id/cbTruckBody4" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -496,8 +480,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/movers"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:text="Грузчики" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <CheckBox
                         android:id="@+id/cbCountMovers1"
@@ -505,8 +488,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/count_movers_1"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tvMovers"
-                        tools:text="1" />
+                        app:layout_constraintTop_toBottomOf="@+id/tvMovers" />
 
                     <CheckBox
                         android:id="@+id/cbCountMovers2"
@@ -516,8 +498,7 @@
                         android:text="@string/count_movers_2"
                         app:layout_constraintBottom_toBottomOf="@+id/cbCountMovers1"
                         app:layout_constraintStart_toEndOf="@+id/cbCountMovers1"
-                        app:layout_constraintTop_toTopOf="@+id/cbCountMovers1"
-                        tools:text="2" />
+                        app:layout_constraintTop_toTopOf="@+id/cbCountMovers1" />
 
                     <CheckBox
                         android:id="@+id/cbCountMovers3"
@@ -526,8 +507,7 @@
                         android:text="@string/count_movers_3"
                         app:layout_constraintBottom_toBottomOf="@+id/cbCountMovers2"
                         app:layout_constraintStart_toEndOf="@+id/cbCountMovers2"
-                        app:layout_constraintTop_toTopOf="@+id/cbCountMovers2"
-                        tools:text="3" />
+                        app:layout_constraintTop_toTopOf="@+id/cbCountMovers2" />
 
                     <CheckBox
                         android:id="@+id/cbCountMovers4"
@@ -536,8 +516,7 @@
                         android:text="@string/count_movers_4"
                         app:layout_constraintBottom_toBottomOf="@+id/cbCountMovers3"
                         app:layout_constraintStart_toEndOf="@+id/cbCountMovers3"
-                        app:layout_constraintTop_toTopOf="@+id/cbCountMovers3"
-                        tools:text="4" />
+                        app:layout_constraintTop_toTopOf="@+id/cbCountMovers3" />
 
                     <CheckBox
                         android:id="@+id/cbCountMovers0"
@@ -546,8 +525,7 @@
                         android:text="@string/no"
                         app:layout_constraintBottom_toBottomOf="@+id/cbCountMovers4"
                         app:layout_constraintStart_toEndOf="@+id/cbCountMovers4"
-                        app:layout_constraintTop_toTopOf="@+id/cbCountMovers4"
-                        tools:text="нет" />
+                        app:layout_constraintTop_toTopOf="@+id/cbCountMovers4" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -563,19 +541,18 @@
                         android:layout_height="wrap_content"
                         android:text="@string/Customer"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:text="Заказчик" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <EditText
                         android:id="@+id/etName"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:ems="10"
+                        android:hint="@string/name"
                         android:inputType="text"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tvCustomer"
-                        tools:text="Имя" />
+                        app:layout_constraintTop_toBottomOf="@+id/tvCustomer" />
 
                     <TextView
                         android:id="@+id/tvPayForm"
@@ -590,31 +567,31 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:ems="10"
+                        android:hint="@string/customers_phone_number1"
                         android:inputType="phone"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tvPayForm"
-                        tools:text="Телефон заказчика 1" />
+                        app:layout_constraintTop_toBottomOf="@+id/tvPayForm" />
 
                     <EditText
                         android:id="@+id/etPhoneCustomer2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:ems="10"
+                        android:hint="@string/customers_phone_number2"
                         android:inputType="phone"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/etPhoneCustomer1"
-                        tools:text="Телефон заказчика 2" />
+                        app:layout_constraintTop_toBottomOf="@+id/etPhoneCustomer1" />
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/tietOrderDescription"
                         android:layout_width="0dp"
                         android:layout_height="140dp"
+                        android:hint="@string/order_description"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/etPhoneCustomer2"
-                        tools:text="Описание заказа" />
+                        app:layout_constraintTop_toBottomOf="@+id/etPhoneCustomer2" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

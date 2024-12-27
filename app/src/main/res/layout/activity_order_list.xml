@@ -64,7 +64,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:text=""
+                android:text="Johana Doe"
                 app:layout_constraintStart_toEndOf="@+id/mcvAvatar"
                 app:layout_constraintTop_toTopOf="@+id/mcvAvatar"
                 tools:text="Johana Doe" />
@@ -127,7 +127,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:strokeColor="@color/material_dynamic_neutral80"
             app:strokeWidth="1dp"
-            tools:text="Обновить" />
+            android:text="@string/update" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/clMap"
@@ -243,7 +243,7 @@
                 app:cornerRadius="@dimen/button_corner_radius"
                 app:strokeColor="@color/material_dynamic_neutral80"
                 app:strokeWidth="1dp"
-                tools:text="Добавить заказ" />
+                android:text="@string/add_order" />
 
             <Button
                 android:id="@+id/bHistoryOrders"
@@ -255,7 +255,7 @@
                 app:cornerRadius="@dimen/button_corner_radius"
                 app:strokeColor="@color/material_dynamic_neutral80"
                 app:strokeWidth="1dp"
-                tools:text="История" />
+                android:text="@string/history" />
 
             <Button
                 android:id="@+id/bCurrentOrders"
@@ -267,7 +267,7 @@
                 app:cornerRadius="@dimen/button_corner_radius"
                 app:strokeColor="@color/material_dynamic_neutral80"
                 app:strokeWidth="1dp"
-                tools:text="Текущие заказы" />
+                android:text="@string/current_orders" />
 
         </LinearLayout>
 

@@ -215,7 +215,7 @@
                     </LinearLayout>
 
                     <EditText
-                        android:id="@+id/etAutoMark"
+                        android:id="@+id/etCarMark"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
@@ -234,9 +234,9 @@
                         android:ems="10"
                         android:hint="@string/state_number"
                         android:inputType="text"
-                        app:layout_constraintEnd_toEndOf="@+id/etAutoMark"
-                        app:layout_constraintStart_toStartOf="@+id/etAutoMark"
-                        app:layout_constraintTop_toBottomOf="@+id/etAutoMark" />
+                        app:layout_constraintEnd_toEndOf="@+id/etCarMark"
+                        app:layout_constraintStart_toStartOf="@+id/etCarMark"
+                        app:layout_constraintTop_toBottomOf="@+id/etCarMark" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -284,7 +284,7 @@
                         android:id="@+id/tietBank"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Банк" />
+                        android:hint="@string/bank" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <CheckBox
